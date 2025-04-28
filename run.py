@@ -6,7 +6,7 @@ import numpy as np
 from src.tello_controller import TelloController
 import importlib
 import controller
-
+from controller import plot_results
 
 class Simulator:
     def __init__(self):
@@ -289,3 +289,5 @@ if __name__ == "__main__":
         loop_time = time.time() - loop_start
         if loop_time < timestep:
             time.sleep(timestep - loop_time)
+
+plot_results()
